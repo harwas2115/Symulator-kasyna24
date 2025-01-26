@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Symulator Kasyna</title>
+<style>
+    body {
+     font-family: Arial, sans-serif;
+     text-align: center;
+     background-color: #f0f0f0;
+     padding: 50px;
+    }
+    button {
+     padding: 10px 20px;
+     font-size: 18px;
+     background-color: #007bff;
+     color: white;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+    }
+    button:hover {
+     background-color: #0056b3;
+    }
+    #result {
+     margin-top: 20px;
+     font-size: 20px;
+     color: #333;
+    }
+</style>
+<script>
+    function spinWheel() {
+     const prizes = [25, 50, 75, 100, 250];
+     const randomIndex = Math.floor(Math.random() * prizes.length);
+     const result = prizes[randomIndex];
+     document.getElementById('result').innerText = `Wygrałeś: ${result} zł!`;
+    }
+</script>
+</head>
+<body>
+<h1>Symulator Kasyna</h1>
+<p>Spróbuj swojego szczęścia, kręcąc kołem fortuny!</p>
+<button onclick="spinWheel()">Kręć kołem</button>
+<p id="result"></p>
+</body>
+</html>
